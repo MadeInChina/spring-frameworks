@@ -7,9 +7,7 @@ import org.springframework.cglib.proxy.MethodProxy;
 
 /**
  * @author hanrw
- * @date 2020/3/21 11:37 AM
- * 打印方法耗费时间代理类
- * 实现cglib的MethodInterceptor
+ * @date 2020/3/21 11:37 AM 打印方法耗费时间代理类 实现cglib的MethodInterceptor
  */
 public class CostTimeProxy implements MethodInterceptor {
   /*
@@ -20,8 +18,10 @@ public class CostTimeProxy implements MethodInterceptor {
   public CostTimeProxy(Object target) {
     this.target = target;
   }
+
   @Override
-  public Object intercept(Object o, Method method, Object[] objects, MethodProxy methodProxy) throws Throwable {
+  public Object intercept(Object o, Method method, Object[] objects, MethodProxy methodProxy)
+      throws Throwable {
     long starTime = System.nanoTime();
     /*
     调用代理对象
@@ -32,9 +32,9 @@ public class CostTimeProxy implements MethodInterceptor {
     return result;
   }
 
-
   /**
    * 创建代理类方法
+   *
    * @param target
    * @param <T>
    * @return

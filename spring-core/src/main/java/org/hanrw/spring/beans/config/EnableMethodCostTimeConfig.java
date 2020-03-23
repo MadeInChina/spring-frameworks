@@ -9,6 +9,4 @@ import org.springframework.context.annotation.ComponentScan;
  */
 @ComponentScan
 @EnableMethodCostTime
-public class EnableMethodCostTimeConfig {
-
-}
+public class EnableMethodCostTimeConfig {}

@@ -14,6 +14,4 @@ import org.springframework.context.annotation.Import;
 @Target(ElementType.TYPE)
 @Retention(RetentionPolicy.RUNTIME)
 @Import(MethodCostTimeImportSelector.class)
-public @interface EnableMethodCostTime {
-
-}
+public @interface EnableMethodCostTime {}

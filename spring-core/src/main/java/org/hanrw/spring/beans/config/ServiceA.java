@@ -1,4 +1,5 @@
 package org.hanrw.spring.beans.config;
+
 import org.springframework.stereotype.Component;
 
 /**
@@ -7,8 +8,7 @@ import org.springframework.stereotype.Component;
  */
 @Component
 public class ServiceA {
-  public void say(){
+  public void say() {
     System.out.println("i'm a");
   }
-
 }
