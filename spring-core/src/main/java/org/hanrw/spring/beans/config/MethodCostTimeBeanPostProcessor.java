@@ -13,7 +13,7 @@ public class MethodCostTimeBeanPostProcessor implements BeanPostProcessor {
   /** bean初始化之后会调用的方法 */
   @Override
   public Object postProcessAfterInitialization(Object bean, String beanName) throws BeansException {
-    if (bean.getClass().getName().toLowerCase().contains("service")) {
+    if (bean.getClass().getName().contains("org.hanrw.spring.beans.config.service")) {
       return CostTimeProxy.createProxy(bean);
     } else {
       return bean;

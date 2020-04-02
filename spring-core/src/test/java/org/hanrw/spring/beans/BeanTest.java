@@ -1,6 +1,6 @@
 package org.hanrw.spring.beans;
 
-import org.hanrw.spring.beans.config.EnableMethodCostTimeConfig;
+import org.hanrw.spring.beans.config.MainConfig;
 import org.hanrw.spring.beans.config.ServiceA;
 import org.hanrw.spring.beans.config.ServiceB;
 import org.junit.Test;
@@ -15,7 +15,7 @@ public class BeanTest {
   public void testEnableMethodCostTimeConfig() {
     // 1.通过AnnotationConfigApplicationContext创建spring容器，参数为@Import标注的类
     AnnotationConfigApplicationContext context =
-        new AnnotationConfigApplicationContext(EnableMethodCostTimeConfig.class);
+        new AnnotationConfigApplicationContext(MainConfig.class);
     ServiceA service1 = context.getBean(ServiceA.class);
     ServiceB service2 = context.getBean(ServiceB.class);
     service1.say();
