@@ -15,7 +15,14 @@ public class QueryBeanFactory implements FactoryBean {
 
   /**
    * 传入接口对象
-   *
+   * 这里构造参数是Class类型,但是在QueryImportBeanDefinitionRegistrar传入构造参数的时候是String类型的全类名
+   * builder.addConstructorArgValue(className);
+   * 为什么这里可以转化成Class对象
+   * 关键在于ConstructorResolver
+   * 会根据需要的类型找到对应的属性编辑器
+   * findDefaultEditor(requiredType);
+   * 从而进行类型转换
+   * convertedValue = converter.convertIfNecessary(originalValue, paramType, methodParam);
    * @param classType
    */
   public QueryBeanFactory(Class classType) {
