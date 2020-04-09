@@ -3,7 +3,7 @@ package org.hanrw.spring.beans.factory;
 import java.lang.reflect.Proxy;
 import java.util.Arrays;
 import org.hanrw.spring.beans.annotation.Query;
-import org.hanrw.spring.services.QueryService;
+import org.hanrw.spring.service.QueryService;
 import org.springframework.beans.factory.FactoryBean;
 
 /**

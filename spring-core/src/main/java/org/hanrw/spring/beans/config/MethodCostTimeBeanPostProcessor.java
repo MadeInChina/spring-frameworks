@@ -1,6 +1,6 @@
 package org.hanrw.spring.beans.config;
 
-import org.hanrw.spring.cglib.CostTimeProxy;
+import org.hanrw.spring.aop.cglib.CostTimeProxy;
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.config.BeanPostProcessor;
 

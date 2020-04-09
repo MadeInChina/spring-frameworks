@@ -1,4 +1,4 @@
-package org.hanrw.spring.services;
+package org.hanrw.spring.service;
 
 import org.hanrw.spring.beans.config.MainConfig;
 import org.junit.Test;

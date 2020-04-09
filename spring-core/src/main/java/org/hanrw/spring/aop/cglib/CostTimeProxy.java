@@ -1,4 +1,4 @@
-package org.hanrw.spring.cglib;
+package org.hanrw.spring.aop.cglib;
 
 import java.lang.reflect.Method;
 import org.springframework.cglib.proxy.Enhancer;

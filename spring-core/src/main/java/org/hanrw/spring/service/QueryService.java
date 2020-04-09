@@ -1,4 +1,4 @@
-package org.hanrw.spring.services;
+package org.hanrw.spring.service;
 
 import org.hanrw.spring.beans.annotation.Query;
 import org.springframework.stereotype.Component;
