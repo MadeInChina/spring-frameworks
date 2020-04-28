@@ -4,10 +4,10 @@ ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry
 
 this.reader.loadBeanDefinitions(configClasses);
 
+ConfigurationClassBeanDefinitionReader.loadBeanDefinitionsForConfigurationClass(configClass, trackedConditionEvaluator);
+
 
 ConfigurationClassBeanDefinitionReader.loadBeanDefinitionsForBeanMethod
-
-
 
 
 // Do we need to mark the bean as skipped by its condition?
@@ -48,4 +48,17 @@ String classOrMethodName = getClassOrMethodName(metadata);
         logOutcome(classOrMethodName, outcome);
         recordEvaluation(context, classOrMethodName, outcome);
         return outcome.isMatch();
+    }
+    
+
+
+ConfigurationClassBeanDefinitionReader.loadBeanDefinitionsForConfigurationClass(configClass, trackedConditionEvaluator);
+//如果需要跳过,则把bean定义从registry里面移除
+if (trackedConditionEvaluator.shouldSkip(configClass)) {
+        String beanName = configClass.getBeanName();
+        if (StringUtils.hasLength(beanName) && this.registry.containsBeanDefinition(beanName)) {
+            this.registry.removeBeanDefinition(beanName);
+        }
+        this.importRegistry.removeImportingClass(configClass.getMetadata().getClassName());
+        return;
     }
