@@ -1,0 +1,3 @@
+PlatformTransactionManager
+TransactionDefinition
+TransactionStatus
