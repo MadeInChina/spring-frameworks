@@ -23,6 +23,7 @@
     <module>spring-core</module>
     <module>spring-transaction</module>
     <module>spring-boot-autoconfiguration</module>
+    <module>spring-data-jpa</module>
   </modules>
 
   <dependencies>
